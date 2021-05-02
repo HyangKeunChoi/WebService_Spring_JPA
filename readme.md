@@ -34,4 +34,15 @@
   - ```<html lang="en" xmlns:th="http://www.thymeleaf.org">```
 + thymeleaf : 타임리프로 렌더링, 타임리프로 렌더링 안하는 경우 둘다 사용가능
   - ```href="/" th:href="@{/}"```
-+ needs-validation을 충족하지못하면 invalid-feedback을 보여주게 된다 
++ needs-validation을 충족하지못하면 invalid-feedback을 보여주게 된다.
+
+### 3. 회원 가입: 폼 서브밋 검증
+#### 회원 가입 폼 검증
++ JSR 303 애노테이션 검증
+  - 값의 길이, 필수값
++ 커스텀 검증
+  - 중복 이메일, 닉네임 여부 확인
++ 폼 에러 있을 시, 폼 다시 보여주기.
+
++ 롬복 어노테이션 @RequiredArgsConstructor
+  
