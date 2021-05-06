@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Getter @Setter @EqualsAndHashCode(of = "id") // 연관관계 순환 참조문제가 발생하여 id만 설정
@@ -51,4 +52,8 @@ public class Account {
     private boolean studyEnrollmentResultByWeb;
 
     private boolean studyUpdatedByWeb;
+
+    public void generateEmailCheckToken() {
+        this.emailCheckToken = UUID.randomUUID().toString();
+    }
 }
